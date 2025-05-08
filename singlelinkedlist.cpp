@@ -167,3 +167,22 @@ int main()
                 cout << "\nList Kosong\n";
                 break;
             }
+
+            Node *previous, *current;
+            cout << "\nMasukkan NIM mahasiswa yang dicari : ";
+            cin >> nim;
+            if (mhs.Search(nim, previous, current) == false)
+                cout << "Data tidak ditemukan" << endl;
+            else
+            {
+                cout << "\nData ditemukan\n";
+                cout << "\nNIM Mahasiswa : " << current->noMhs << endl;
+            }
+            break;
+        case '5':
+            break;
+        default:
+            cout << "Pilihan salah!" << endl;
+        }
+    } while (ch != '5');
+}
